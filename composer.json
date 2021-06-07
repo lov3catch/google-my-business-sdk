@@ -1,0 +1,23 @@
+{
+    "name": "promorepublic/google-my-business-api-client",
+    "description": "Api client for google my business",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Ihor K.",
+            "email": "lov3catch@gmail.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {"GoogleMyBusiness\\": "src/"}
+    },
+    "autoload-dev": {
+        "psr-4": {"GoogleMyBusiness\\Tests\\": "tests/"}
+    },
+    "require": {
+        "psr/http-client": "^1.0",
+        "phpstan/phpstan": "^0.12.88",
+        "phpunit/phpunit": "^9.5"
+    }
+}
