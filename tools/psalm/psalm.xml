@@ -3,7 +3,6 @@
     <projectFiles>
         <directory name="../../src" />
         <ignoreFiles>
-            <file name="../../src/mock/*" />
         </ignoreFiles>
     </projectFiles>
 
