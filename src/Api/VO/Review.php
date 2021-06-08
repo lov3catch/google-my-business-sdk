@@ -6,6 +6,7 @@ declare(strict_types=1);
 namespace GoogleMyBusiness\Api\VO;
 
 
+use DateTimeImmutable;
 use GoogleMyBusiness\Api\VO\Names\ReviewName;
 
 class Review
@@ -42,14 +43,14 @@ class Review
         return $this->data['comment'] ?? '';
     }
 
-    public function createdTime(): \DateTimeImmutable
+    public function createdTime(): DateTimeImmutable
     {
-        return (new \DateTimeImmutable())->setTimestamp(strtotime($this->data['createTime']));
+        return (new DateTimeImmutable())->setTimestamp(strtotime($this->data['createTime']));
     }
 
-    public function updatedTime(): \DateTimeImmutable
+    public function updatedTime(): DateTimeImmutable
     {
-        return (new \DateTimeImmutable())->setTimestamp(strtotime($this->data['updateTime']));
+        return (new DateTimeImmutable())->setTimestamp(strtotime($this->data['updateTime']));
     }
 
     public function reviewReply(): ?ReviewReply
