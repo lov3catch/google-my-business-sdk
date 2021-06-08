@@ -7,8 +7,8 @@ namespace GoogleMyBusiness\Tests;
 
 use GoogleMyBusiness\Api\QuestionApi;
 use GoogleMyBusiness\Api\VO\Question;
-use GoogleMyBusiness\SdkFake\GoogleMyBusinessFakeHttpClient;
 use GoogleMyBusiness\Tests\Fake\FakeTokenProvider;
+use GoogleMyBusinessMock\GoogleMyBusinessFakeHttpClient;
 use PHPUnit\Framework\TestCase;
 
 class QuestionApiTest extends TestCase

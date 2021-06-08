@@ -9,8 +9,8 @@ use GoogleMyBusiness\Api\LocationApi;
 use GoogleMyBusiness\Api\QuestionApi;
 use GoogleMyBusiness\Api\ReviewApi;
 use GoogleMyBusiness\Client;
-use GoogleMyBusiness\SdkFake\GoogleMyBusinessFakeHttpClient;
 use GoogleMyBusiness\Tests\Fake\FakeTokenProvider;
+use GoogleMyBusinessMock\GoogleMyBusinessFakeHttpClient;
 use PHPUnit\Framework\TestCase;
 
 class ClientTest extends TestCase

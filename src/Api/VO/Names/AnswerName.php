@@ -8,8 +8,11 @@ namespace GoogleMyBusiness\Api\VO\Names;
 
 class AnswerName
 {
-    public function __construct(public string $name)
+    public string $name;
+
+    public function __construct(string $name)
     {
+        $this->name = $name;
     }
 
     public function questionName(): QuestionName

@@ -10,8 +10,11 @@ use GoogleMyBusiness\Api\VO\Names\QuestionName;
 
 class Question
 {
-    public function __construct(private array $data)
+    private array $data;
+
+    public function __construct(array $data)
     {
+        $this->data = $data;
     }
 
     public function name(): QuestionName

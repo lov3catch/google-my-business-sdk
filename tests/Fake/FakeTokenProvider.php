@@ -14,6 +14,6 @@ class FakeTokenProvider implements TokenProviderInterface
 
     public function token(array $credentials = []): TokenInterface
     {
-        return new Token();
+        return new FakeToken();
     }
 }

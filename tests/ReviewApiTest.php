@@ -8,8 +8,8 @@ namespace GoogleMyBusiness\Tests;
 use GoogleMyBusiness\Api\ReviewApi;
 use GoogleMyBusiness\Api\VO\Review;
 use GoogleMyBusiness\Api\VO\ReviewReply;
-use GoogleMyBusiness\SdkFake\GoogleMyBusinessFakeHttpClient;
 use GoogleMyBusiness\Tests\Fake\FakeTokenProvider;
+use GoogleMyBusinessMock\GoogleMyBusinessFakeHttpClient;
 use PHPUnit\Framework\TestCase;
 
 class ReviewApiTest extends TestCase

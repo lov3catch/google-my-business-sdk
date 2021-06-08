@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "e16fcf7589649fb7c22ea7a803a3d6e6",
+    "content-hash": "aee2a34f193c89e155b1439ff09c3000",
     "packages": [
         {
             "name": "doctrine/instantiator",
@@ -1105,6 +1105,46 @@
                 }
             ],
             "time": "2021-06-05T04:49:07+00:00"
+        },
+        {
+            "name": "promorepublic/google-my-business-mock",
+            "version": "0.0.1-alpha",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/lov3catch/google-my-business-mock.git",
+                "reference": "9925fba8b38052db3ca60d98ce2897024ea2e47b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/lov3catch/google-my-business-mock/zipball/9925fba8b38052db3ca60d98ce2897024ea2e47b",
+                "reference": "9925fba8b38052db3ca60d98ce2897024ea2e47b",
+                "shasum": ""
+            },
+            "require": {
+                "phpstan/phpstan": "^0.12.88",
+                "symfony/http-client": "^5.3"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "GoogleMyBusinessMock\\": "src/"
+                }
+            },
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ihor K.",
+                    "email": "lov3catch@gmail.com"
+                }
+            ],
+            "description": "Mocked responses for google-my-business",
+            "support": {
+                "source": "https://github.com/lov3catch/google-my-business-mock/tree/0.0.1-alpha",
+                "issues": "https://github.com/lov3catch/google-my-business-mock/issues"
+            },
+            "time": "2021-06-08T08:35:09+00:00"
         },
         {
             "name": "psr/container",
@@ -2999,8 +3039,10 @@
     ],
     "packages-dev": [],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "alpha",
+    "stability-flags": {
+        "promorepublic/google-my-business-mock": 15
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": [],

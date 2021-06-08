@@ -8,8 +8,11 @@ namespace GoogleMyBusiness\Api\VO\Names;
 
 class ReviewName
 {
-    public function __construct(public string $name)
+    public string $name;
+
+    public function __construct(string $name)
     {
+        $this->name = $name;
     }
 
     public function locationName(): LocationName

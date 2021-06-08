@@ -14,8 +14,13 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class Client
 {
-    public function __construct(private HttpClientInterface $httpClient, private TokenProviderInterface $tokenProvider)
+    private HttpClientInterface $httpClient;
+    private TokenProviderInterface $tokenProvider;
+
+    public function __construct(HttpClientInterface $httpClient, TokenProviderInterface $tokenProvider)
     {
+        $this->tokenProvider = $tokenProvider;
+        $this->httpClient = $httpClient;
     }
 
     public function location(): LocationApi

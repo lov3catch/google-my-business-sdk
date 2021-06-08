@@ -9,17 +9,26 @@
             "email": "lov3catch@gmail.com"
         }
     ],
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:lov3catch/google-my-business-mock.git"
+        }
+    ],
     "autoload": {
         "psr-4": {"GoogleMyBusiness\\": "src/"}
     },
     "autoload-dev": {
         "psr-4": {"GoogleMyBusiness\\Tests\\": "tests/"}
     },
+    "minimum-stability": "alpha",
     "require": {
+        "php": "^7.4",
         "psr/http-client": "^1.0",
         "phpstan/phpstan": "^0.12.88",
         "phpunit/phpunit": "^9.5",
         "guzzle/guzzle": "^3.9",
-        "symfony/http-client": "^5.3"
+        "symfony/http-client": "^5.3",
+        "promorepublic/google-my-business-mock": "^0.0.1@alpha"
     }
 }

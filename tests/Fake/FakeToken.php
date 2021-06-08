@@ -8,7 +8,7 @@ namespace GoogleMyBusiness\Tests\Fake;
 
 use GoogleMyBusiness\TokenInterface;
 
-class Token implements TokenInterface
+class FakeToken implements TokenInterface
 {
 
     public function accessToken(): string

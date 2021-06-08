@@ -15,8 +15,13 @@ use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class QuestionApi
 {
-    public function __construct(private HttpClientInterface $httpClient, private TokenProviderInterface $tokenProvider)
+    private HttpClientInterface $httpClient;
+    private TokenProviderInterface $tokenProvider;
+
+    public function __construct(HttpClientInterface $httpClient, TokenProviderInterface $tokenProvider)
     {
+        $this->httpClient = $httpClient;
+        $this->tokenProvider = $tokenProvider;
     }
 
     public function list(string $location, int $pageSize = 10, ?string $nextPageToken = null): iterable

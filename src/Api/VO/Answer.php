@@ -9,8 +9,11 @@ use GoogleMyBusiness\Api\VO\Names\AnswerName;
 
 class Answer
 {
-    public function __construct(private array $data)
+    private array $data;
+
+    public function __construct(array $data)
     {
+        $this->data = $data;
     }
 
     public function name(): AnswerName
