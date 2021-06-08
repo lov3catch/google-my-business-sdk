@@ -6,15 +6,16 @@ declare(strict_types=1);
 namespace GoogleMyBusiness\Api;
 
 
-use App\Sdk\Api\VO\Answer;
-use App\Sdk\Api\VO\Names\QuestionName;
-use App\Sdk\Api\VO\Question;
-use App\Sdk\Exceptions\EntityNotFoundException;
-use Psr\Http\Client\ClientInterface;
+use GoogleMyBusiness\Api\VO\Answer;
+use GoogleMyBusiness\Api\VO\Names\QuestionName;
+use GoogleMyBusiness\Api\VO\Question;
+use GoogleMyBusiness\Exceptions\EntityNotFoundException;
+use GoogleMyBusiness\TokenProviderInterface;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class QuestionApi
 {
-    public function __construct(private ClientInterface $httpClient, private TokenProviderInterface $tokenProvider)
+    public function __construct(private HttpClientInterface $httpClient, private TokenProviderInterface $tokenProvider)
     {
     }
 

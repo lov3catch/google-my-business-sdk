@@ -6,15 +6,15 @@ declare(strict_types=1);
 namespace GoogleMyBusiness;
 
 
-use App\Sdk\Api\AnswerApi;
-use App\Sdk\Api\LocationApi;
-use App\Sdk\Api\QuestionApi;
-use App\Sdk\Api\ReviewApi;
-use Psr\Http\Client\ClientInterface;
+use GoogleMyBusiness\Api\AnswerApi;
+use GoogleMyBusiness\Api\LocationApi;
+use GoogleMyBusiness\Api\QuestionApi;
+use GoogleMyBusiness\Api\ReviewApi;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class Client
 {
-    public function __construct(private ClientInterface $httpClient, private TokenProviderInterface $tokenProvider)
+    public function __construct(private HttpClientInterface $httpClient, private TokenProviderInterface $tokenProvider)
     {
     }
 

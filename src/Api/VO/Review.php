@@ -6,9 +6,7 @@ declare(strict_types=1);
 namespace GoogleMyBusiness\Api\VO;
 
 
-namespace App\Sdk\Api\VO;
-
-use App\Sdk\Api\VO\Names\ReviewName;
+use GoogleMyBusiness\Api\VO\Names\ReviewName;
 
 class Review
 {

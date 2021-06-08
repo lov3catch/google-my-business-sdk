@@ -5,7 +5,7 @@ declare(strict_types=1);
 
 namespace GoogleMyBusiness\Api\VO;
 
-use App\Sdk\Api\VO\Names\AnswerName;
+use GoogleMyBusiness\Api\VO\Names\AnswerName;
 
 class Answer
 {

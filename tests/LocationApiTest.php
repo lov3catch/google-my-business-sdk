@@ -7,8 +7,8 @@ namespace GoogleMyBusiness\Tests;
 use GoogleMyBusiness\Api\LocationApi;
 use GoogleMyBusiness\Api\VO\Location;
 use GoogleMyBusiness\Api\VO\Names\AccountName;
-use GoogleMyBusiness\FakeTokenProvider;
 use GoogleMyBusiness\SdkFake\GoogleMyBusinessFakeHttpClient;
+use GoogleMyBusiness\Tests\Fake\FakeTokenProvider;
 use PHPUnit\Framework\TestCase;
 
 class LocationApiTest extends TestCase

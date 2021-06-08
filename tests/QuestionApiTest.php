@@ -5,10 +5,10 @@ declare(strict_types=1);
 
 namespace GoogleMyBusiness\Tests;
 
-use App\Fake\FakeTokenProvider;
-use App\Sdk\Api\QuestionApi;
-use App\Sdk\Api\VO\Question;
-use App\SdkFake\GoogleMyBusinessFakeHttpClient;
+use GoogleMyBusiness\Api\QuestionApi;
+use GoogleMyBusiness\Api\VO\Question;
+use GoogleMyBusiness\SdkFake\GoogleMyBusinessFakeHttpClient;
+use GoogleMyBusiness\Tests\Fake\FakeTokenProvider;
 use PHPUnit\Framework\TestCase;
 
 class QuestionApiTest extends TestCase
@@ -22,7 +22,7 @@ class QuestionApiTest extends TestCase
         self::assertNotEmpty($questions);
 
         /**
-         * @var $questions \App\Sdk\Api\VO\Question[]
+         * @var $questions Question[]
          */
         foreach ($questions as $question) {
             self::assertInstanceOf(Question::class, $question, 'Wrong instance of');

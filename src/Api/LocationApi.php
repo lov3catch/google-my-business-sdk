@@ -9,11 +9,11 @@ namespace GoogleMyBusiness\Api;
 use GoogleMyBusiness\Api\VO\Location;
 use GoogleMyBusiness\Api\VO\Names\AccountName;
 use GoogleMyBusiness\TokenProviderInterface;
-use Psr\Http\Client\ClientInterface;
+use Symfony\Contracts\HttpClient\HttpClientInterface;
 
 class LocationApi
 {
-    public function __construct(private ClientInterface $httpClient, private TokenProviderInterface $tokenProvider)
+    public function __construct(private HttpClientInterface $httpClient, private TokenProviderInterface $tokenProvider)
     {
     }
 

@@ -3,15 +3,17 @@
 declare(strict_types=1);
 
 
-namespace GoogleMyBusiness;
+namespace GoogleMyBusiness\Tests\Fake;
 
+
+use GoogleMyBusiness\TokenInterface;
 
 class Token implements TokenInterface
 {
 
     public function accessToken(): string
     {
-        // TODO: Implement accessToken() method.
+        return 'fake-token';
     }
 
     public function refreshToken(): string

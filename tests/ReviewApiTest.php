@@ -5,10 +5,11 @@ declare(strict_types=1);
 
 namespace GoogleMyBusiness\Tests;
 
-use App\Sdk\Api\ReviewApi;
-use App\Sdk\Api\VO\Review;
-use App\Sdk\Api\VO\ReviewReply;
-use App\SdkFake\GoogleMyBusinessFakeHttpClient;
+use GoogleMyBusiness\Api\ReviewApi;
+use GoogleMyBusiness\Api\VO\Review;
+use GoogleMyBusiness\Api\VO\ReviewReply;
+use GoogleMyBusiness\SdkFake\GoogleMyBusinessFakeHttpClient;
+use GoogleMyBusiness\Tests\Fake\FakeTokenProvider;
 use PHPUnit\Framework\TestCase;
 
 class ReviewApiTest extends TestCase

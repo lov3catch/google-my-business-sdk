@@ -6,48 +6,89 @@ declare(strict_types=1);
 namespace GoogleMyBusiness\SdkFake;
 
 
-use GuzzleHttp\Psr7\Response;
-use Psr\Http\Message\ResponseInterface;
+use Symfony\Component\HttpClient\Response\MockResponse;
+use Symfony\Contracts\HttpClient\ResponseInterface;
 
 class ResponseFactory
 {
-    public static function makeAccountListResponse(): ResponseInterface
-    {
+    public static function makeAccountListResponse(
+        string $method,
+        string $url,
+        array $options
+    ): ResponseInterface {
     }
 
-    public static function makeLocationListResponse(): ResponseInterface
-    {
-        $data = file_get_contents(__DIR__ . '/mock/location_list_response.json');
-
-        return new Response(200, [], $data);
+    public static function makeLocationListResponse(
+        string $method,
+        string $url,
+        array $options
+    ): ResponseInterface {
+        return MockResponse::fromRequest(
+            $method,
+            $url,
+            $options,
+            new MockResponse(
+                file_get_contents(__DIR__ . '/mock/location_list_response.json')
+            )
+        );
     }
 
-    public static function makeReviewListResponse(): ResponseInterface
-    {
-        $data = file_get_contents(__DIR__ . '/mock/review_list_response.json');
-
-        return new Response(200, [], $data);
+    public static function makeReviewListResponse(
+        string $method,
+        string $url,
+        array $options
+    ): ResponseInterface {
+        return MockResponse::fromRequest(
+            $method,
+            $url,
+            $options,
+            new MockResponse(
+                file_get_contents(__DIR__ . '/mock/review_list_response.json')
+            )
+        );
     }
 
-    public static function makeReviewDetailResponse(): ResponseInterface
-    {
-        $data = file_get_contents(__DIR__ . '/mock/review_detail_response.json');
-
-        return new Response(200, [], $data);
+    public static function makeReviewDetailResponse(
+        string $method,
+        string $url,
+        array $options
+    ): ResponseInterface {
+        return MockResponse::fromRequest(
+            $method,
+            $url,
+            $options,
+            new MockResponse(
+                file_get_contents(__DIR__ . '/mock/review_detail_response.json')
+            )
+        );
     }
 
-    public static function makePostListResponse(): ResponseInterface
-    {
+    public static function makePostListResponse(
+        string $method,
+        string $url,
+        array $options
+    ): ResponseInterface {
     }
 
-    public static function makeQuestionListResponse(): ResponseInterface
-    {
-        $data = file_get_contents(__DIR__ . '/mock/question_list_response.json');
-
-        return new Response(200, [], $data);
+    public static function makeQuestionListResponse(
+        string $method,
+        string $url,
+        array $options
+    ): ResponseInterface {
+        return MockResponse::fromRequest(
+            $method,
+            $url,
+            $options,
+            new MockResponse(
+                file_get_contents(__DIR__ . '/mock/question_list_response.json')
+            )
+        );
     }
 
-    public static function makeAnswerListResponse(): ResponseInterface
-    {
+    public static function makeAnswerListResponse(
+        string $method,
+        string $url,
+        array $options
+    ): ResponseInterface {
     }
 }

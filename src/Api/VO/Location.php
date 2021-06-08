@@ -6,7 +6,7 @@ declare(strict_types=1);
 namespace GoogleMyBusiness\Api\VO;
 
 
-use App\Sdk\Api\VO\Names\LocationName;
+use GoogleMyBusiness\Api\VO\Names\LocationName;
 
 class Location
 {
