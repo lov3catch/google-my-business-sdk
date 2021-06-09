@@ -30,6 +30,6 @@
         "symfony/http-client": "^5.3"
     },
     "require-dev": {
-        "promorepublic/google-my-business-mock": "^0.0.5"
+        "promorepublic/google-my-business-mock": "^0.0.6"
     }
 }
